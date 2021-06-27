@@ -1,1 +1,12 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+# lennartcb.me
+
+The source code of my portfolio site.
+
+## Running Locally
+
+```shell
+$ git clone https://github.com/cbl/lennartcb.me.git
+$ cd lennartcb.me
+$ npm i
+$ npm run dev
+```
