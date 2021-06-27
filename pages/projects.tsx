@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { NextPage } from "next";
 import ReactMarkdown from 'react-markdown'
-import Container from '../components/container'
+import Main from '../components/main'
 import Header from '../components/header';
 import Project from '../components/project'
 
@@ -15,7 +15,7 @@ const Projects: NextPage<ProjectsProps> = ({ ...props }) => (
             <title>Projects - Lennart Carstens-Behrens</title>
         </Head>
         <Header {...props} />
-        <Container>
+        <Main>
             <div className="">
                 <ul className="max-w-2xl border-t border-b border-blueGray-200 dark:border-blueGray-600 divide-y divide-blueGray-200 dark:divide-blueGray-600 text-gray-700 dark:text-blueGray-200">
                     <li className="py-10">
@@ -56,7 +56,7 @@ const Projects: NextPage<ProjectsProps> = ({ ...props }) => (
                     </li>
                 </ul>
             </div>
-        </Container>
+        </Main>
     </>
 )
 

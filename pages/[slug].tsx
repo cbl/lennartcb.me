@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { GetStaticProps, GetStaticPaths, NextPage } from 'next'
-import Container from '../components/container'
+import Main from '../components/main'
 import Header from '../components/header'
 import { getAllArticles, getArticleBySlug, Meta } from '../lib/articles';
 import markdownToHtml from '../lib/markdown';
@@ -30,9 +30,9 @@ const Article: NextPage<ArticleProps> = ({ meta, content, ...props }) => {
                 />
             </Head>
             <Header {...props} />
-            <Container>
+            <Main>
                 <article className="prose dark:prose-dark" dangerouslySetInnerHTML={{ __html: content as string }} />
-            </Container>
+            </Main>
         </>
     );
 }

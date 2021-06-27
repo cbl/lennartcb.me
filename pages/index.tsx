@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { FunctionComponent } from "react";
 import Header from '../components/header';
-import Container from '../components/container';
+import Main from '../components/main';
 
 const IndexPage: FunctionComponent = (props) => (
     <>
@@ -9,7 +9,7 @@ const IndexPage: FunctionComponent = (props) => (
             <title>Hello - Lennart Carstens-Behrens</title>
         </Head>
         <Header {...props} />
-        <Container>
+        <Main>
             <div className="xl:flex justify-between gap-10">
                 <div className="mb-10 xl:mb-0 flex xl:block justify-around">
                     <img className="rounded-full w-64 xl:w-24" src="https://avatars.githubusercontent.com/u/29352871?v=4" />
@@ -27,7 +27,7 @@ const IndexPage: FunctionComponent = (props) => (
                     </p>
                 </div>
             </div>
-        </Container>
+        </Main>
     </>
 );
 

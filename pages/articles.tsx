@@ -2,7 +2,7 @@ import Head from "next/head";
 import { getArticleBySlug, Article } from '../lib/articles';
 import { NextPage } from "next";
 import ReactMarkdown from 'react-markdown'
-import Container from '../components/container'
+import Main from '../components/main'
 import Header from '../components/header';
 
 const articles = [
@@ -19,7 +19,7 @@ const Articles: NextPage<ArticlesProps> = ({ articles, ...props }) => (
             <title>Articles - Lennart Carstens-Behrens</title>
         </Head>
         <Header {...props} />
-        <Container>
+        <Main>
             <div className="">
                 <ul className="border-t border-b border-blueGray-200 dark:border-blueGray-600 divide-y divide-blueGray-200 dark:divide-blueGray-600 text-gray-700 dark:text-blueGray-200">
                     {(articles).map((article, i) => (
@@ -45,7 +45,7 @@ const Articles: NextPage<ArticlesProps> = ({ articles, ...props }) => (
                     ))}
                 </ul>
             </div>
-        </Container>
+        </Main>
     </>
 )
 
