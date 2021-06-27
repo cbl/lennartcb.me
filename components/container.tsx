@@ -2,8 +2,6 @@ import { FunctionComponent } from 'react';
 import Head from "next/head";
 import Header from './header';
 import { useRouter } from 'next/router';
-import ReactGA from 'react-ga';
-
 
 type ContainerProps = {
     meta?: {
@@ -24,8 +22,6 @@ const Main: FunctionComponent<ContainerProps> = ({ children, meta }) => {
         type: 'website',
         ...meta
     };
-
-    // ReactGA.initialize('UA-200667548-1');
 
     return (
         <>
