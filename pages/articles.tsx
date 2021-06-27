@@ -49,7 +49,7 @@ const Articles: NextPage<ArticlesProps> = ({ articles, ...props }) => (
     </>
 )
 
-export const getStaticProps: GetStaticProps = async ({ params }) => ({
+export const getStaticProps: GetStaticProps = async () => ({
     props: {
         articles: articles.map((slug) => {
             return getArticleBySlug(slug)

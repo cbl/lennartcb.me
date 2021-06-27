@@ -29,6 +29,15 @@ const Projects: NextPage<ProjectsProps> = ({ ...props }) => (
                     </li>
                     <li className="py-10">
                         <Project
+                            link="https://github.com/cbl/lennartcb.me"
+                            title="lennartcb.me"
+                            tags={['TypeScript', 'React']}
+                        >
+                            Comming soon...
+                        </Project>
+                    </li>
+                    <li className="py-10">
+                        <Project
                             link="https://github.com/cbl/algorithm-analyzer"
                             title="algorithm-analyzer"
                             tags={['Java']}
