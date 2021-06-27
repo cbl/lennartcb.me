@@ -11,7 +11,8 @@ const Header: FunctionComponent = () => {
     return (
         <>
             <header className="lg:flex top-0 z-30 mx-auto h-20 max-w-4xl px-10 lg:px-0 pt-10 pb-32 lg:pb-20 lg:pt-20 justify-between">
-                <div className="w-9 h-9">
+                <div className="xl:w-9 h-9 flex w-full justify-between">
+                    <div></div>
                 {mounted &&
                     <button
                         className="mb-6 lg:mb-0 mt-1 bg-blueGray-200 active:bg-blueGray-300 text-blueGray-800 dark:bg-blueGray-800 dark:active:bg-blueGray-700 dark:text-white w-9 h-9 rounded flex items-center justify-around"
