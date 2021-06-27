@@ -17,7 +17,7 @@ const Main: FunctionComponent<ContainerProps> = ({ children, meta }) => {
 
     const _meta = {
         title: 'Lennart Carstens-Behrens',
-        description: `Software developer, IT-Systems enthusiast, Zimmermann.`,
+        description: `Software developer, IT-Systems enthusiast, Carpenter.`,
         image: 'https://lennartcb.me/static/images/banner.jpg',
         type: 'website',
         ...meta
