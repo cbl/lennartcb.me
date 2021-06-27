@@ -1,7 +1,7 @@
 ---
 title: "Runtime (Big O) Of Laravel's One-Of-Many Relationship"
 description: "Determining the runtime (Big O) of laravel's new one-of-many relationship."
-date: 'June 26, 2021'
+date: 'June 27, 2021'
 ---
 
 # Runtime (Big O) Of Laravel's One-Of-Many Relationship

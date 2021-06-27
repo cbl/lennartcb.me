@@ -15,6 +15,7 @@ const Tag: FunctionComponent<TagProps> = ({ name, className }) => (
         'bg-cyan-700 text-cyan-100': name == 'TypeScript',
         'bg-sky-400 text-sky-900': name == 'React',
         'bg-green-300 text-green-900': name == 'Vue',
+        'bg-black text-white': name == 'Next.js',
         className: true
     })}>
         {name}

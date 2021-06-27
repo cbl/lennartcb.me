@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { GetStaticProps, GetStaticPaths, NextPage } from 'next'
-import Main from '../components/main'
+import Container from '../components/container'
 import Header from '../components/header'
 import { getAllArticles, getArticleBySlug, Meta } from '../lib/articles';
 import markdownToHtml from '../lib/markdown';
@@ -18,7 +18,6 @@ const Article: NextPage<ArticleProps> = ({ meta, content, ...props }) => {
     return (
         <>
             <Head>
-                <title>{meta.title} - Lennart Carstens-Behrens</title>
                 <link
                     rel="preload"
                     href="https://unpkg.com/prismjs@0.0.1/themes/prism-tomorrow.css"
@@ -29,10 +28,9 @@ const Article: NextPage<ArticleProps> = ({ meta, content, ...props }) => {
                     rel="stylesheet"
                 />
             </Head>
-            <Header {...props} />
-            <Main>
+            <Container meta={meta}>
                 <article className="prose dark:prose-dark" dangerouslySetInnerHTML={{ __html: content as string }} />
-            </Main>
+            </Container>
         </>
     );
 }

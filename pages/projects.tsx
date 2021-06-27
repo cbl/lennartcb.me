@@ -1,21 +1,16 @@
 import Head from "next/head";
 import { NextPage } from "next";
 import ReactMarkdown from 'react-markdown'
-import Main from '../components/main'
+import Container from '../components/container'
 import Header from '../components/header';
 import Project from '../components/project'
 
-type ProjectsProps = {
-    //
-}
-
-const Projects: NextPage<ProjectsProps> = ({ ...props }) => (
+const Projects: NextPage = () => (
     <>
         <Head>
             <title>Projects - Lennart Carstens-Behrens</title>
         </Head>
-        <Header {...props} />
-        <Main>
+        <Container>
             <div className="">
                 <ul className="max-w-2xl border-t border-b border-blueGray-200 dark:border-blueGray-600 divide-y divide-blueGray-200 dark:divide-blueGray-600 text-gray-700 dark:text-blueGray-200">
                     <li className="py-10">
@@ -31,7 +26,7 @@ const Projects: NextPage<ProjectsProps> = ({ ...props }) => (
                         <Project
                             link="https://github.com/cbl/lennartcb.me"
                             title="lennartcb.me"
-                            tags={['TypeScript', 'React']}
+                            tags={['Next.js', 'TypeScript', 'React']}
                         >
                             Comming soon...
                         </Project>
@@ -65,7 +60,7 @@ const Projects: NextPage<ProjectsProps> = ({ ...props }) => (
                     </li>
                 </ul>
             </div>
-        </Main>
+        </Container>
     </>
 )
 
