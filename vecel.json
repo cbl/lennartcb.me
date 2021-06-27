@@ -1,0 +1,7 @@
+{
+    "functions": {
+        "lib/articles.ts": {
+            "includeFiles": "articles/**"
+        }
+    }
+}
