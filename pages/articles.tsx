@@ -1,9 +1,9 @@
 import Head from "next/head";
-import { getArticleBySlug, Article } from '../lib/articles';
-import { NextPage } from "next";
+import { NextPage, GetStaticProps } from "next";
 import ReactMarkdown from 'react-markdown'
 import Main from '../components/main'
 import Header from '../components/header';
+import { getArticleBySlug, Article } from '../lib/articles';
 
 const articles = [
     'runtime-of-laravels-one-of-many-relationship'
@@ -49,10 +49,12 @@ const Articles: NextPage<ArticlesProps> = ({ articles, ...props }) => (
     </>
 )
 
-Articles.getInitialProps = () => ({ 
-    articles: articles.map((slug) => {
-        return getArticleBySlug(slug)
-    })
+export const getStaticProps: GetStaticProps = async ({ params }) => ({
+    props: {
+        articles: articles.map((slug) => {
+            return getArticleBySlug(slug)
+        })
+    }
 })
 
 export default Articles;
