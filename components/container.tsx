@@ -25,7 +25,7 @@ const Main: FunctionComponent<ContainerProps> = ({ children, meta }) => {
         ...meta
     };
 
-    ReactGA.initialize('UA-200667548-1');
+    // ReactGA.initialize('UA-200667548-1');
 
     return (
         <>
@@ -45,6 +45,18 @@ const Main: FunctionComponent<ContainerProps> = ({ children, meta }) => {
                 <meta name="twitter:title" content={_meta.title} />
                 <meta name="twitter:description" content={_meta.description} />
                 <meta name="twitter:image" content={_meta.image} />
+                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-200667548-1"></script>
+                <script
+                    dangerouslySetInnerHTML={{
+                    __html: `                    
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        
+                        gtag('config', 'UA-200667548-1');
+                    `
+                    }}
+                />
             </Head>
             <Header />
             <main className="px-10 lg:pl-16 py-14 max-w-4xl mx-auto">
