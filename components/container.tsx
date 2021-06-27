@@ -16,7 +16,7 @@ const Main: FunctionComponent<ContainerProps> = ({ children, meta }) => {
     const router = useRouter();
 
     const _meta = {
-        title: 'Lennart Carstens-Behrens - Developer and IT-Systems enthusiast',
+        title: 'Lennart Carstens-Behrens',
         description: `Software developer, IT-Systems enthusiast, Zimmermann.`,
         image: 'https://lennartcb.me/static/images/banner.png',
         type: 'website',
