@@ -13,6 +13,7 @@
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
     "next": "^10.0.0",
+    "next-themes": "^0.0.15",
     "prismjs": "^1.23.0",
     "raw-loader": "^4.0.2",
     "react": "17.0.1",

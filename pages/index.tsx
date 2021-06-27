@@ -6,7 +6,7 @@ import Container from '../components/container';
 const IndexPage: FunctionComponent = (props) => (
     <>
         <Head>
-            <title>Home - Lennart Carstens-Behrens</title>
+            <title>Hello - Lennart Carstens-Behrens</title>
         </Head>
         <Header {...props} />
         <Container>

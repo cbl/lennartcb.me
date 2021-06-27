@@ -11,7 +11,9 @@ type ProjectsProps = {
 
 const Projects: NextPage<ProjectsProps> = ({ ...props }) => (
     <>
-        <Head>Articles</Head>
+        <Head>
+            <title>Projects - Lennart Carstens-Behrens</title>
+        </Head>
         <Header {...props} />
         <Container>
             <div className="">
