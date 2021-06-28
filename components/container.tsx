@@ -32,7 +32,7 @@ const Main: FunctionComponent<ContainerProps> = ({ children, meta }) => {
                 <meta property="og:url" content={`https://lennartcb.me${router.asPath}`} />
                 <link rel="canonical" href={`https://lennartcb.me${router.asPath}`} />
                 <meta property="og:type" content={_meta.type} />
-                <meta property="og:site_name" content="Lee Robinson" />
+                <meta property="og:site_name" content="Lennart Carstens-Behrens" />
                 <meta property="og:description" content={_meta.description} />
                 <meta property="og:title" content={_meta.title} />
                 <meta property="og:image" content={_meta.image} />
