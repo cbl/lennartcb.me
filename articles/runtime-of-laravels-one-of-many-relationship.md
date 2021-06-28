@@ -1,6 +1,6 @@
 ---
 title: "Runtime (Big O) Of Laravel's One-Of-Many Relationship"
-description: "Determining the runtime (Big O) of laravel's new one-of-many relationship."
+description: "Understanding the runtime of the generated SQL query of Laravel's new one-of-many relationship and how to use this knowledge to improve performance."
 date: 'June 27, 2021'
 ---
 
