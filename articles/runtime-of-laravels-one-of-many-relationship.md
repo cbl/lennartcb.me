@@ -14,17 +14,17 @@ In this article I am going to explain the generated sql query and the runtime (B
 
 ## The Problems
 
-First, I will explain the problems that a sql query must solve in order to cover all possible use cases. To picture the problems I will use the following example: A user has many **logins** but only one **latest login**.
+First, I will explain the problems that an implementation must solve in order to cover all possible use cases. To picture the problems I will use the following example: A user has many **logins** but only one **latest login**.
 
 ### Eager Loading
 
-Laravel's **Eager Loading** provides a convinient way to eliminate "N+1" query problems when loading relationships for multiple models. It loads all necessary relations in a separate query. Given the case the related logins for all users with the ids **1,2,3,4 and 5** are needed, the query would look like this:
+Laravel's **Eager Loading** provides a convenient way to eliminate "N+1" query problems when loading relationships for multiple models. It loads all necessary relations in a separate query. Given the case the related logins for all users with the ids **1,2,3,4 and 5** are needed, the query would look like this:
 
 ```sql
 select * from logins where logins.user_id in (1,2,3,4,5)
 ```
 
-Retrieving all `latestLogin`'s for each create a `greates-n-per-group` problem - there is a whole section on [stackoverflow](https://stackoverflow.com/questions/tagged/greatest-n-per-group?tab=Votes) which deals with this kind of queries.
+Retrieving all `latestLogin`'s for each user is a `greates-n-per-group` problem - there is a whole section on [stackoverflow](https://stackoverflow.com/questions/tagged/greatest-n-per-group?tab=Votes) which deals with this kind of queries.
 
 ### Querying Relationship Existence
 
@@ -47,7 +47,7 @@ where exists (
 )
 ```
 
-However, this query invites all users who have already logged in on a mobile device.
+However, this query selects all users who have already logged in on a mobile device.
 
 ### Selects
 
@@ -74,7 +74,7 @@ As will be shown later, the inner join approach is much faster.
 
 ### Subselect Approach
 
-First I briefly show the subselect query. Here, for each login, it is checked whether there is a login with the same id and the same user_id that is the last login orderd by id:
+First I briefly show the subselect approach. Here, for each login, it is checked whether there is a login with the same id and the same user_id that is the last login orderd by id:
 
 ```sql
 select *
@@ -133,7 +133,7 @@ inner join (
 on latest_login.id = logins.id
 ```
 
-Running `explain format=tree` on the query (again 4 users with 25):
+Running `explain format=tree` on the query (again 4 users with 25 logins each):
 
 ```sql
 -> Nested loop inner join  (cost=4.81 rows=5)
