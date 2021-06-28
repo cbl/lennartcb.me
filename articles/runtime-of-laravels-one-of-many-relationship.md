@@ -67,8 +67,8 @@ select *, (select * from logins where ...) from users
 
 To solve all three problems described above, I have found two solutions. One uses a subselect and one uses an inner join. Here are the pull requests for both implementations:
 
--   inner join approach: [framework/pull#37362](https://github.com/laravel/framework/pull/37362)
--   subselect approach: [framework/pull#37252](https://github.com/laravel/framework/pull/37252)
+-   inner join approach: [laravel/framework#37362](https://github.com/laravel/framework/pull/37362)
+-   subselect approach: [laravel/framework#37252](https://github.com/laravel/framework/pull/37252)
 
 As will be shown later, the inner join approach is much faster.
 
