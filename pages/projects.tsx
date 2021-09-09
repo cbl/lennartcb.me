@@ -33,6 +33,15 @@ const Projects: NextPage = () => (
                     </li>
                     <li className="py-10">
                         <Project
+                            link="https://github.com/cbl/chess"
+                            title="chess"
+                            tags={['Java']}
+                        >
+                            A virtual chess board written in Java.
+                        </Project>
+                    </li>
+                    <li className="py-10">
+                        <Project
                             link="https://github.com/cbl/algorithm-analyzer"
                             title="algorithm-analyzer"
                             tags={['Java']}
