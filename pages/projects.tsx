@@ -28,7 +28,7 @@ const Projects: NextPage = () => (
                             title="lennartcb.me"
                             tags={['Next.js', 'TypeScript', 'React']}
                         >
-                            Comming soon...
+                            My personal website.
                         </Project>
                     </li>
                     <li className="py-10">
