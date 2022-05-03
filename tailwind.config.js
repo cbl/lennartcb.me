@@ -84,6 +84,11 @@ module.exports = {
         extend: {
             colors,
         },
+        colors: {
+            ...colors,
+            rust: '#dea584',
+            tex: '#3D6117',
+        },
     },
     variants: {
         extend: {

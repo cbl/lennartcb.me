@@ -15,6 +15,15 @@ const Projects: NextPage = () => (
                 <ul className="max-w-2xl border-t border-b border-blueGray-200 dark:border-blueGray-600 divide-y divide-blueGray-200 dark:divide-blueGray-600 text-gray-700 dark:text-blueGray-200">
                     <li className="py-10">
                         <Project
+                            link="https://github.com/cbl/informatiCup2022"
+                            title="informatiCup2022"
+                            tags={['Rust', 'TeX']}
+                        >
+                            An application of tabu-enhanced genetic search to the railway optimization problem introduced in the <a href="https://informaticup.github.io/competition/20-current">informatiCup2022</a> by the <a href="https://gi.de/">German Informatics Society (GI)</a>. The project was rewarded with the 2nd place.
+                        </Project>
+                    </li>
+                    <li className="py-10">
+                        <Project
                             link="https://github.com/macramejs"
                             title="macramejs"
                             tags={['TypeScript', 'React', 'Vue']}
@@ -28,7 +37,7 @@ const Projects: NextPage = () => (
                             title="lennartcb.me"
                             tags={['Next.js', 'TypeScript', 'React']}
                         >
-                            Comming soon...
+                            A personal portfolio site.
                         </Project>
                     </li>
                     <li className="py-10">
